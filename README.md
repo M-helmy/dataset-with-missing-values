@@ -68,6 +68,13 @@ BIC = BIC(ols.new ,ols.pmm, ols.crt, ols.rf, ols.bayes)
 
 matr = as.matrix(cbind(AIC, BIC)[,-c(1,3)])
 
+# output :               AIC      BIC
+#             ols.new   220.0387 225.7747
+#             ols.pmm   217.4222 223.1581
+#             ols.crt   217.4521 223.1880
+#             ols.rf    217.7187 223.4546
+#             ols.bayes 220.2163 225.9523
+
 windows(400,500)
 
 barplot(matr , beside = T, main = "handling missing data by imputation"
